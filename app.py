@@ -4,12 +4,10 @@ import sys
 import time
 from langchain_core.messages import HumanMessage, AIMessage
 
-# Add the current directory to sys.path so we can import from chatbot
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from chatbot.agent import get_agent
 
-# Configure Streamlit page
 st.set_page_config(
     page_title="ACS880 Diagnostics", 
     page_icon="⚙️",
@@ -17,7 +15,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for a professional look
 st.markdown("""
 <style>
     .reportview-container {
@@ -131,7 +128,6 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-# React to user input
 if prompt := st.chat_input("E.g., What causes an F5001 fault?"):
     with st.chat_message("user"):
         st.markdown(prompt)
