@@ -1,0 +1,16 @@
+langchain
+langgraph
+langchain-google-genai
+langchain-community
+chromadb
+openpyxl
+pandas
+python-dotenv
+tiktoken
+fastapi
+uvicorn
+langchain-huggingface
+sentence-transformers
+streamlit
+torchvision
+langchain-groq
